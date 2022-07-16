@@ -9,12 +9,13 @@ process.on('uncaughtException', err=>{
     process.exit(1)
 })
 
+//configure the environment route
 dotenv.config({
     path: './config.env',
    
 })
 
-
+//set up the DB connection link
 const DB = process.env.DATABASE.replace(
     '<PASSWORD>',
     process.env.DATABASE_PASSWORD
